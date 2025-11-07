@@ -1,0 +1,15 @@
+[2025-11-07T04:10:40.277+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_migration_dag.ensure_database_exists manual__2025-11-07T04:10:36.208565+00:00 [queued]>
+[2025-11-07T04:10:40.291+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_migration_dag.ensure_database_exists manual__2025-11-07T04:10:36.208565+00:00 [queued]>
+[2025-11-07T04:10:40.292+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 1
+[2025-11-07T04:10:40.321+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): ensure_database_exists> on 2025-11-07 04:10:36.208565+00:00
+[2025-11-07T04:10:40.331+0000] {standard_task_runner.py:57} INFO - Started process 174 to run task
+[2025-11-07T04:10:40.338+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'data_migration_dag', 'ensure_database_exists', 'manual__2025-11-07T04:10:36.208565+00:00', '--job-id', '75', '--raw', '--subdir', 'DAGS_FOLDER/data_migration_dag.py', '--cfg-path', '/tmp/tmpu5f6ksrr']
+[2025-11-07T04:10:40.343+0000] {standard_task_runner.py:85} INFO - Job 75: Subtask ensure_database_exists
+[2025-11-07T04:10:40.376+0000] {logging_mixin.py:150} WARNING - /home/***/.local/lib/python3.7/site-packages/***/settings.py:195 DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+[2025-11-07T04:10:40.464+0000] {task_command.py:410} INFO - Running <TaskInstance: data_migration_dag.ensure_database_exists manual__2025-11-07T04:10:36.208565+00:00 [running]> on host aa3a9cd7ab41
+[2025-11-07T04:10:40.636+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='data_migration_dag' AIRFLOW_CTX_TASK_ID='ensure_database_exists' AIRFLOW_CTX_EXECUTION_DATE='2025-11-07T04:10:36.208565+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-11-07T04:10:36.208565+00:00'
+[2025-11-07T04:10:42.741+0000] {logging_mixin.py:150} INFO - local.db already exists, no action needed.
+[2025-11-07T04:10:42.742+0000] {python.py:183} INFO - Done. Returned value was: None
+[2025-11-07T04:10:42.756+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=data_migration_dag, task_id=ensure_database_exists, execution_date=20251107T041036, start_date=20251107T041040, end_date=20251107T041042
+[2025-11-07T04:10:42.843+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2025-11-07T04:10:42.902+0000] {taskinstance.py:2653} INFO - 1 downstream tasks scheduled from follow-on schedule check
